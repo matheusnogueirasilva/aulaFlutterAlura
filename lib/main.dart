@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'database/app_database.dart';
-import 'models/cantact.dart';
-import 'screens/contacts_list.dart';
 import 'screens/dashboard.dart';
 
 void main() {
