@@ -13,7 +13,7 @@ class ContactsList extends StatelessWidget {
       ),
       body: FutureBuilder<List<Contact>>(
         initialData: [],
-        future:findAll(),
+        future: findAll(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
@@ -48,15 +48,11 @@ class ContactsList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context)
-              .push(
-                MaterialPageRoute(
-                  builder: (context) => ContactForm(),
-                ),
-              )
-              .then(
-                (newContact) => debugPrint(newContact.toString()),
-              );
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ContactForm(),
+            ),
+          );
         },
         child: Icon(Icons.add),
       ),
